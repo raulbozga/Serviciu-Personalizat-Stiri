@@ -3,7 +3,7 @@ body {
 
     max-width: 600px ;
     margin: auto;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
     font-family:'Times New Roman', Times, serif;
     background-color: #282c34cb; 
   
@@ -42,7 +42,7 @@ header{
     display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  height: 50px;
     
 }
 

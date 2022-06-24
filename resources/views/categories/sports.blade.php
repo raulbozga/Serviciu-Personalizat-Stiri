@@ -2,7 +2,10 @@
 <html lang="en">
 
 <title>Serviciu stiri</title>
-<link rel="stylesheet" type='text/css' href="CSS/style.css" />
+<link rel="stylesheet" type='text/css' href="../CSS/style.css" />
+<header><a href="/">
+        <h1>Serviciu stiri</h1>
+    </a></header>
 
 <head>
 
@@ -10,11 +13,9 @@
 
 </head>
 
-<header><a href="/">
-        <h1>Serviciu stiri</h1>
-    </a></header>
 
-<body style=" max-width: 600px ;margin: auto; padding-bottom:2rem;">
+
+<body>
 
 
     <div class="stire">
