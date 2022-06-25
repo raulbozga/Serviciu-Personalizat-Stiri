@@ -13,7 +13,7 @@
 <header>
 
     <a href="/">
-        <h1>Serviciu stiri</h1>
+        <h1 style="position: fixed ;">Serviciu stiri</h1>
     </a>
 
 

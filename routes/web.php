@@ -50,12 +50,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-// Route::get('stiri/{stire}', function ($id) {
 
-
-//     return view('stire', [
-//         'stire' => Post::findOrFail($id)
-//     ]);
-// }); // constrangere pentru ruta url
 
 require __DIR__ . '/auth.php';

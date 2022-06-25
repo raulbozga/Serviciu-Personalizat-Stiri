@@ -1,10 +1,13 @@
 <x-guest-layout>
+
     <x-auth-card>
+
         <x-slot name="logo">
             <a href="/">
                 Serviciu Personal
             </a>
         </x-slot>
+
 
         <!-- Validation Errors -->
         <x-auth-validation-errors class="mb-4" :errors="$errors" />
@@ -51,4 +54,5 @@
             </div>
         </form>
     </x-auth-card>
+
 </x-guest-layout>

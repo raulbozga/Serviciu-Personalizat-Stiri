@@ -15,7 +15,7 @@
 
         <div class="stire">
             <?php
-            $file = "https://newsdata.io/api/1/news?apikey=pub_84288303248520ee801ef808f4ef5dc36fc0&country=ro";
+            $file = "https://newsdata.io/api/1/news?apikey=pub_84288303248520ee801ef808f4ef5dc36fc0&country=ro&category=business,science,politics,sports";
 
             $data = file_get_contents($file);
 
@@ -29,7 +29,7 @@
 
 
                     <h2>
-                        <a href="{{$user->link}}">{{$user->title}} ---go to</a>
+                        <a href="{{$user->link}}" clas="titlu">{{$user->title}} </a>
 
                     </h2>
 
@@ -37,12 +37,12 @@
                         <img src="{{$user->image_url}} ">
                     </a>
 
-                    <h3>
-                        {{$user->pubDate}}
-                    </h3>
+                    <h4>
+                        <p>postat : {{$user->pubDate}}</p>
+                    </h4>
 
                     <div>
-                        {{$user->description}}
+                        <p>{{$user->description}}</p>
 
                     </div>
 
