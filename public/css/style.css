@@ -80,13 +80,14 @@
     font-family:'Times New Roman', Times, serif;
     background-color: #282c34cb; 
     background-image: url("../poze/5.png");
-     /* background-repeat: no-repeat; 
+     background-repeat: no-repeat; 
+    
      background-attachment:local; 
-     background-size: contain;
-    position: relative; */
-    background-repeat: no-repeat;
+     background-size:cover;
+  
+    /* background-repeat: no-repeat;
   background-attachment: local;
-  background-position: top;
+  background-position: top; */
 }
 .body-politics{
     padding-top:2rem ;
@@ -167,9 +168,10 @@
     font-family:'Times New Roman', Times, serif;
     background-color: #282c34cb; 
     background-image: url("../poze/11.png");
-    background-repeat: no-repeat;
-  background-attachment: local;
-  background-position: top;
+    background-repeat: no-repeat; 
+    
+    background-attachment:local; 
+    background-size:cover;
 } 
 
  .body-weather{

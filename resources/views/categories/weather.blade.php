@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="../CSS/style.css">
 
 <header> <a href="/">
-        <h1 style="position: fixed ; padding: right 1rem;"><img src="../poze/logo2.png "></h1>
+        <h1 style="padding: right 4rem;"><img src="../poze/logo2.png "></h1>
     </a></header>
 
 <body class="body-weather">

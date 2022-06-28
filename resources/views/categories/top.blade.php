@@ -69,6 +69,8 @@
     <a href="/">
         Back </a>
 
+    <x-footer />
+
 </body>
 
 </html>
