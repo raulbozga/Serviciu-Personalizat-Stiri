@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@2.8.2/dist/alpine.min.js"></script>
 <link rel="stylesheet" href="../CSS/style.css">
 <link rel="stylesheet" href="app.css">
-
-
-<meta charset="utf-8">
-<script src="api.js"></script>
+<link href='https://css.gg/instagram.css' rel='stylesheet'>
+<link href='https://css.gg/facebook.css' rel='stylesheet'>
+<link href='https://css.gg/git-fork.css' rel='stylesheet'>
 
 
 <title>Serviciu stiri</title>
@@ -13,62 +14,17 @@
 <header>
 
     <a href="/">
-        <h1 style="position: fixed ;">Serviciu stiri</h1>
+        <h1 style="position: fixed ; padding: right 1rem;"><img src="../poze/logo2.png "></h1>
     </a>
 
 
-    <form action="/categories/sport" method="get">
+    <x-buttons />
 
-        <button class="button" value="send"> Sports </button>
-
-    </form>
-    <form action="/categories/business" method="get">
-
-        <button type="submit" class="button" value="send">Busines</button>
-
-    </form>
-    <form action="/categories/environment" method="get">
-        <button type="submit" class="button" value="send">Environment</button>
-
-    </form>
-    <form action="/categories/food" method="get">
-        <button type="submit" class="button" value="send">Food</button>
-
-    </form>
-    <form action="/categories/health" method="get">
-        <button type="submit" class="button" value="send">Health</button>
-
-    </form>
-    <form action="/categories/politics" method="get">
-        <button type="submit" class="button" value="send">Politics</button>
-
-    </form>
-    <form action="/categories/science" method="get">
-        <button type="submit" class="button" value="send">Science</button>
-
-    </form>
-    <form action="/categories/technology" method="get">
-        <button type="submit" class="button" value="send">Technology</button>
-
-    </form>
-    <form action="/categories/top" method="get">
-        <button type="submit" class="button" value="send">Top</button>
-
-    </form>
-    <form action="/categories/world" method="get">
-        <button type="submit" class="button" value="send">World</button>
-
-    </form>
-
-    <form action="/categories/weather" method="get">
-        <button type="submit" class="button" value="send">Search Weather</button>
-
-    </form>
 </header>
 
 <body>
 
-    <div class="">
+    <div>
         @if (Route::has('login'))
         <div class="all ">
             @auth
@@ -83,11 +39,17 @@
         </div>
         @endif
 
+        <x-flash />
 
-        <div>
+        <div class="main-news">
             {{$slot}}
-
         </div>
 
-        <main id="main"></main>
+
+
+    </div>
+
+    <x-footer />
+
+
 </body>

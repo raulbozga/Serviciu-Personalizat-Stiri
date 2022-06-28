@@ -2,20 +2,21 @@
 <html lang="en">
 
 <title>Serviciu stiri</title>
-<link rel="stylesheet" type='text/css' href="CSS/style.css" />
+<link rel="stylesheet" type='text/css' href="../CSS/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
 
-    <h2>Politics</h2>
+
 
 </head>
 
-<header><a href="/">
-        <h1>Serviciu stiri</h1>
+<header> <a href="/">
+        <h1 style="position: fixed ; padding: right 1rem;"><img src="../poze/logo2.png "></h1>
     </a></header>
 
-<body style=" max-width: 600px ;margin: auto; padding-bottom:2rem;">
-
+<body class="body-politics">
+    <x-logare />
 
     <div class="stire">
         <?php
@@ -29,7 +30,7 @@
         $result = json_decode($data);
         $user_data = $result->results;
 
-        ?><a href="/">
+        ?> <h2>Politics</h2><a href="/">
             Back </a>
         <?php foreach ($user_data as $user) : ?>
             <article>
@@ -66,6 +67,8 @@
 
     <a href="/">
         Back </a>
+
+    <x-footer />
 
 </body>
 

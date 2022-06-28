@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Serviciu stiri</title>
 <link rel="stylesheet" href="../CSS/style.css">
 
-<!-- <script src="script.js" defer></script> -->
-
-<header><a href="/">
-        <h1>Serviciu stiri</h1>
+<header> <a href="/">
+        <h1 style="position: fixed ; padding: right 1rem;"><img src="../poze/logo2.png "></h1>
     </a></header>
 
 <body class="body-weather">
-
-    <div>
+    <x-logare />
+    <div class="footer">
 
 
         <form method="get" action="weather" name="name" class="form">
-            <input type="text" name="name" value="" class="input"></input>
+            <input type="text" name="name" placeholder="Introduceti orasul" class="input"></input>
             <input type="submit" class="button">
         </form>
 
@@ -41,7 +39,9 @@
 
         $api_url = "http://api.weatherapi.com/v1/current.json?key=${apikey}&q=${city}&lang=ro";
         // dd($api_url);
-        $data = file_get_contents($api_url);
+        $new = str_replace(' ', '%20', $api_url);
+
+        $data = file_get_contents($new);
 
         $result = json_decode($data, true);
 
@@ -52,18 +52,38 @@
 
         ?>
 
-        <div class="tabel">
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid;
+            }
+        </style>
 
-            <p style="text-align: center">Temperatura in {{$city}} este {{$temperature}} °C</p>
-            <p style="text-align: center">Umiditate {{$humidity}} %</p>
-            <p style="text-align: center">Cerul {{$condition}} </p>
+        <div class="tabel">
+            <table style="align-items: center;">
+
+                <tr style="align-items: center">
+                    <td> Temperatura in {{$city}} este de {{$temperature}} °C</td>
+                </tr>
+
+
+                <tr>
+                    <td style="text-align: center">Umiditate {{$humidity}} %</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center">Cerul {{$condition}} </td>
+                </tr>
+
+            </table>
+
 
         </div>
 
 
 
     </div>
-    <a href="/">Back</a>
+    <x-footer />
 </body>
 
 </html>

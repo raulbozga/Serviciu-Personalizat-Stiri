@@ -2,37 +2,39 @@
 <html lang="en">
 
 <title>Serviciu stiri</title>
-<link rel="stylesheet" type='text/css' href="CSS/style.css" />
+<link rel="stylesheet" type='text/css' href="../CSS/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<header> <a href="/">
+        <h1 style="position: fixed ; padding: right 1rem;"><img src="../poze/logo2.png "></h1>
+    </a></header>
 
 <head>
 
-    <h2>Environment</h2>
 
 </head>
-<header><a href="/">
-        <h1>Serviciu stiri</h1>
-    </a></header>
 
-<body style=" max-width: 600px ;margin: auto; padding-bottom:2rem;">
+<body class="body-env">
 
-
+    <x-logare />
     <div class="stire">
         <?php
 
         $category = "environment";
 
         $file = "https://newsdata.io/api/1/news?apikey=pub_84288303248520ee801ef808f4ef5dc36fc0&country=us&category={$category}";
-        //$file = "http://api.mediastack.com/v1/news?access_key=26c3c6cb2249167251ba46a4774c4b0c&country=ro";
+
         $data = file_get_contents($file);
 
         $result = json_decode($data);
         $user_data = $result->results;
 
-        ?>
+        ?> <h2>Environment</h2>
+        <a href="/">
+            Back </a>
         <?php foreach ($user_data as $user) : ?>
             <article>
-                <a href="/" style="font-display:centre">
-                    back </a>
+
 
                 <h2>
                     <a href="{{$user->link}}">{{$user->title}} </a>
@@ -65,6 +67,8 @@
 
     <a href="/" style="font-display:centre">
         back </a>
+
+    <x-footer />
 
 </body>
 

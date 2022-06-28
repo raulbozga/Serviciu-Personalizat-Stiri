@@ -20,6 +20,8 @@ class AuthenticatedSessionController extends Controller
         return view('auth.login');
     }
 
+
+
     /**
      * Handle an incoming authentication request.
      *
@@ -28,9 +30,13 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
+
         $request->authenticate();
 
         $request->session()->regenerate();
+
+
+        session()->flash('success', 'Te-ai connectat cu succes!');
 
         return redirect()->intended(RouteServiceProvider::HOME);
     }

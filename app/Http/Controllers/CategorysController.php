@@ -2,10 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Facade\FlareClient\Http\Response;
+use Illuminate\Auth\Access\Response as AccessResponse;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response as HttpFoundationResponse;
 
 class CategorysController extends Controller
 {
+
+    public function admin()
+    {
+        return view('admin');
+    }
+
     public function business()
     {
         return view('categories.business');

@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Serviciu stiri</title>
-<link rel="stylesheet" type='text/css' href="CSS/style.css" />
+<link rel="stylesheet" type='text/css' href="../CSS/style.css" />
+<header> <a href="/">
+        <h1 style="position: fixed ; padding: right 1rem;"><img src="../poze/logo2.png "></h1>
+    </a></header>
 
 <head>
 
-    <h2>Technology</h2>
+
 
 </head>
 
-<header><a href="/">
-        <h1>Serviciu stiri</h1>
-    </a></header>
 
-<body style=" max-width: 600px ;margin: auto; padding-bottom:2rem;">
 
+<body class="body-tech">
+    <x-logare />
 
     <div class="stire">
         <?php
@@ -29,7 +30,8 @@
         $result = json_decode($data);
         $user_data = $result->results;
 
-        ?><a href="/">
+        ?><h2>Technology</h2>
+        <a href="/">
             Back </a>
         <?php foreach ($user_data as $user) : ?>
             <article>
@@ -66,6 +68,8 @@
 
     <a href="/">
         Back </a>
+
+    <x-footer />
 
 </body>
 

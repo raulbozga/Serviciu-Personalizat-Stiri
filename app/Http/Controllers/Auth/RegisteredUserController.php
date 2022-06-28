@@ -47,6 +47,8 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
+        session()->flash('success', 'Te-ai inregistrat cu success');
+
         Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);

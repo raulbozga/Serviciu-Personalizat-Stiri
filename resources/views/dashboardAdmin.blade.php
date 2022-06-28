@@ -13,8 +13,6 @@
                 <div class="p-6 bg-green border-b border-gray-200">
                     <div>
                         <p>{{session('success')}}</p>
-
-
                     </div>
                 </div>
             </div>
@@ -22,8 +20,7 @@
     </div>
     @endif
 
-
-
+    <p>Bine ai venit Admin!</p>
 
 
 </x-app-layout>
