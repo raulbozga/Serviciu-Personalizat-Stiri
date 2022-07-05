@@ -24,7 +24,7 @@
 
 
                     <h2>
-                        <a href="{{$user->link}}" clas="titlu">{{$user->title}} </a>
+                        <a href="{{$user->link}}" class="titlu">{{$user->title}} </a>
 
                     </h2>
 

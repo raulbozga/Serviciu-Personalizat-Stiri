@@ -16,17 +16,15 @@ use GuzzleHttp\Middleware;
 |
 */
 
-// Route::get('/dashboardAdmin', function () {
-//     return view('dashboardAdmin');
-// })->middleware(['auth']);
 
-Route::group(['middleware' => 'auth'], function () {
+
+Route::group(['middleware' => ['auth', 'active_user']], function () {
 
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
 
-    // Route::view('RegUsers', 'RegUsers')->name('RegUsers');
+
 
     Route::get('RegUsers', [AdminControlUsers::class, 'SeeUsers'])->middleware('admin')->name('RegUsers');
 });
@@ -36,10 +34,6 @@ Route::get('/', function () {
         'home'
     );
 });
-
-// Route::get('adminUsers', [AdminControlUsers::class, 'SeeUsers']);
-
-// Route::get('admin', [CategorysController::class, 'admin'])->middleware('admin');
 
 Route::get('/categories/sport', [CategorysController::class, 'sport']);
 

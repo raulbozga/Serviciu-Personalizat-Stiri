@@ -1,35 +1,35 @@
 <form action="/categories/sport" method="get">
 
-    <button class="button" value="send"> Sports </button>
+    <button class="button" value="send"> Sport </button>
 
 </form>
 <form action="/categories/business" method="get">
 
-    <button type="submit" class="button" value="send">Busines</button>
+    <button type="submit" class="button" value="send">Business</button>
 
 </form>
 <form action="/categories/environment" method="get">
-    <button type="submit" class="button" value="send">Environment</button>
+    <button type="submit" class="button" value="send">Mediu</button>
 
 </form>
 <form action="/categories/food" method="get">
-    <button type="submit" class="button" value="send">Food</button>
+    <button type="submit" class="button" value="send">Specialitati</button>
 
 </form>
 <form action="/categories/health" method="get">
-    <button type="submit" class="button" value="send">Health</button>
+    <button type="submit" class="button" value="send">Sanatate</button>
 
 </form>
 <form action="/categories/politics" method="get">
-    <button type="submit" class="button" value="send">Politics</button>
+    <button type="submit" class="button" value="send">Politica</button>
 
 </form>
 <form action="/categories/science" method="get">
-    <button type="submit" class="button" value="send">Science</button>
+    <button type="submit" class="button" value="send">Stiinta</button>
 
 </form>
 <form action="/categories/technology" method="get">
-    <button type="submit" class="button" value="send">Technology</button>
+    <button type="submit" class="button" value="send">Tehnologie</button>
 
 </form>
 <form action="/categories/top" method="get">
@@ -42,6 +42,6 @@
 </form>
 
 <form action="/categories/weather" method="get">
-    <button type="submit" class="button" value="send">Weather </button>
+    <button type="submit" class="button" value="send">Vreme </button>
 
 </form>

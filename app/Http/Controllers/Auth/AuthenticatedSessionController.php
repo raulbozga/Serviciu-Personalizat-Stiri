@@ -20,6 +20,12 @@ class AuthenticatedSessionController extends Controller
         return view('auth.login');
     }
 
+    // protected function credentials(Request $request)
+    // {
+    //     $credentials = $request->only($this->username(), 'password');
+    //     return array_add($credentials, 'blocked_at', 0);
+    // }
+
 
 
     /**

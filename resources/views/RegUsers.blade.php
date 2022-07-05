@@ -36,7 +36,7 @@
                                         Creat
                                     </th>
                                     <th scope="col" class="p-4">
-                                        <span class="sr-only">Edit</span>
+                                        <span class="sr-only">Bock</span>
                                     </th>
                                 </tr>
                             </thead>
@@ -57,7 +57,7 @@
                                     <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"> {{$user->email}}</td>
                                     <td class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white">{{$user->created_at}}</td>
                                     <td class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap">
-                                        <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                        <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline bg-red" style="background-color: red; border-radius: 4px; color:white;">Block</a>
                                     </td>
                                 </tr>
 
